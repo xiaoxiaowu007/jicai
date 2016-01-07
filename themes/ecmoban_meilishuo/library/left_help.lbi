@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+   <div class="left_help clearfix">
+      <dl>
+	<dt> <img src="../images/left_help_biao.gif"> <a href='/article_list.php?id=22' title="加入吉采">加入吉采</a></dt>
+</dl>
+<dl>
+	<dt> <img src="../images/left_help_biao.gif"> <a href='/article_cat.php?id=23' title="新闻动态">新闻动态</a></dt>
+</dl>
+<dl>
+	<dt> <img src="../images/left_help_biao.gif"> <a href='/article_list.php?id=24' title="公司公告">公司公告</a></dt>
+</dl>
+<!--{if $helps}-->
+<!-- {foreach from=$helps item=help_cat} -->
+<dl>
+  <dt> <img src="../images/left_help_biao.gif"> <a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}">{$help_cat.cat_name}</a></dt>
+  <!-- {foreach from=$help_cat.article item=item} -->
+  <dd><a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+  <!-- {/foreach} -->
+</dl>
+<!-- {/foreach} -->
+<!--{/if}-->
+  </div>
+<div class="blank"></div>

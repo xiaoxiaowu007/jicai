@@ -1,0 +1,407 @@
+<!-- $Id: article_info.htm 16780 2009-11-09 09:28:30Z sxc_shop $ -->
+{include file="pageheader_jg.htm"}
+{insert_scripts files="../js/utils.js,selectzone.js,validator.js"}
+<!-- start goods form -->
+<style>
+.w300{ width:300px;}
+</style>
+<div class="tab-div">
+  <div id="tabbar-div">
+    <p>
+      <span class="tab-front" id="general-tab">{$lang.tab_general}</span>
+    </p>
+  </div>
+
+  <div id="tabbody-div">
+    <form  action="article.php" method="post" enctype="multipart/form-data" name="theForm" >
+    <table width="90%" id="general-table">
+      <tr>
+        <td class="narrow-label">技工名称</td>
+        <td><input type="text" name="jg_name" size ="40" maxlength="60" value="{$article.jg_name|escape}" />{$lang.require_field}</td>
+      </tr>
+      <tr>
+        <td class="narrow-label">国籍</td>
+        <td><input type="text" name="jg_guoji" size ="40" maxlength="60" value="{$article.jg_guoji|escape}" />{$lang.require_field}</td>
+      </tr>  
+      <tr>
+        <td class="narrow-label">擅长领域</td>
+        <td><input type="text" name="jg_area" size ="40" maxlength="60" value="{$article.jg_area|escape}" />{$lang.require_field}</td>
+      </tr> 
+      <tr>
+        <td class="narrow-label">工作年限</td>
+        <td><input type="text" name="experience" size ="40" maxlength="60" value="{$article.experience|escape}" />{$lang.require_field}</td>
+      </tr>            
+      <tr>
+        <td class="narrow-label">座右铭</td>
+        <td><input type="text" name="zuoyouming" size ="40" maxlength="60" value="{$article.zuoyouming|escape}" />{$lang.require_field}</td>
+      </tr>             
+      <!-- {if $article.cat_id >= 0} -->
+      <tr style="display:none;">
+        <td class="narrow-label">{$lang.cat} </td>
+        <td>
+          <select name="article_cat" onchange="catChanged()">
+            <option value="0">{$lang.select_plz}</option>
+            {$cat_select}
+          </select>
+         {$lang.require_field}</td>
+      </tr>
+      <!-- {else} -->
+      <input type="hidden" name="article_cat" value="-1"/>
+      <!-- {/if} -->
+      {if $article.cat_id >= 0}
+      <tr style="display:none;">
+        <td class="narrow-label">{$lang.article_type}</td>
+        <td><input type="radio" name="article_type" value="0" {if $article.article_type eq 0}checked{/if}>{$lang.common}
+      <input type="radio" name="article_type" value="1" {if $article.article_type eq 1}checked{/if}>{$lang.top}
+        {$lang.require_field}</td>
+      </tr>
+      <tr>
+        <td class="narrow-label">推荐首页</td>
+        <td>
+        <input type="radio" name="is_open" value="1" {if $article.is_open eq 1}checked{/if}> 是
+      <input type="radio" name="is_open" value="0" {if $article.is_open eq 0}checked{/if}>否{$lang.require_field}</td>
+      </tr>
+      {else}
+      <tr style="display:none">
+      <td colspan="2"><input type="hidden" name="article_type" value="0" /><input type="hidden" name="is_open" value="1" /></td>
+      </tr>
+      {/if}
+      <tr>
+        <td class="narrow-label">公司职位</td>
+        <td><input type="text" name="jg_company" maxlength="60" value="{$article.jg_company|escape}" /></td>
+      </tr>
+      <tr style="display:none">
+        <td class="narrow-label">{$lang.email}</td>
+        <td><input type="text" name="author_email" maxlength="60" value="{$article.author_email|escape}" /></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">技工简介</td>
+        <td><textarea name="jg_brief" id="description" cols="40" rows="5">{$article.jg_brief|escape}</textarea></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">技工缩略图</td>
+        <td><input type="file" name="jg_img">
+        <input name="jg_img_url" type="hidden" value="{$article.jg_img|escape}" size="30" maxlength="255"  id="imgshow_1_1" />
+        <input type="button" value="查看图片" id="imgshow_1"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      
+      <tr>
+        <td class="narrow-label">内页左下角图片</td>
+        <td><input type="file" name="left_img">
+        <input name="left_img_url" type="hidden" value="{$article.left_img|escape}" size="30" maxlength="255"  id="imgshow_2_1" />
+        <input type="button" value="查看图片" id="imgshow_2"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      
+      <tr>
+        <td class="narrow-label">首页推荐图片</td>
+        <td><input type="file" name="rec_img">
+        <input name="rec_img_url" type="hidden" value="{$article.rec_img|escape}" size="30" maxlength="255"  id="imgshow_3_1" />
+        <input type="button" value="查看图片" id="imgshow_3"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>  
+      
+      <tr>
+        <td class="narrow-label">技工名称图片</td>
+        <td><input type="file" name="jg_name_img">
+        <input name="jg_name_img_url" type="hidden" value="{$article.jg_name_img|escape}" size="30" maxlength="255"  id="imgshow_4_1" />
+        <input type="button" value="查看图片" id="imgshow_4"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      <tr>
+        <td class="narrow-label">技工头像图</td>
+        <td><input type="file" name="jg_tou">
+        <input name="jg_tou_url" type="hidden" value="{$article.jg_tou|escape}" size="30" maxlength="255"  id="imgshow_5_1" />
+        <input type="button" value="查看图片" id="imgshow_5"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      
+      
+      <tr>
+        <td class="narrow-label">产品图片1</td>
+        <td><input type="file" name="jg_products1">
+        <input name="jg_products1_url" type="hidden" value="{$article.jg_products1|escape}" size="30" maxlength="255"  id="imgshow_6_1" />
+        <input type="button" value="查看图片" id="imgshow_6"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+         </td>
+      </tr>
+      <tr>
+        <td class="narrow-label">产品图片2</td>
+        <td><input type="file" name="jg_products2">
+        <input name="jg_products2_url" type="hidden" value="{$article.jg_products2|escape}" size="30" maxlength="255"  id="imgshow_7_1" />
+        <input type="button" value="查看图片" id="imgshow_7"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      <tr>
+        <td class="narrow-label">产品图片3</td>
+        <td><input type="file" name="jg_products3">
+        <input name="jg_products3_url" type="hidden" value="{$article.jg_products3|escape}" size="30" maxlength="255"  id="imgshow_8_1" />
+        <input type="button" value="查看图片" id="imgshow_8"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      <tr>
+        <td class="narrow-label">产品图片4</td>
+        <td><input type="file" name="jg_products4">
+        <input name="jg_products4_url" type="hidden" value="{$article.jg_products4|escape}" size="30" maxlength="255"  id="imgshow_9_1" />
+        <input type="button" value="查看图片" id="imgshow_9"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+          </td>
+      </tr>
+      <tr>
+        <td class="narrow-label">产品图片5</td>
+        <td><input type="file" name="jg_products5">
+        <input name="jg_products5_url" type="hidden" value="{$article.jg_products5|escape}" size="30" maxlength="255"  id="imgshow_10_1" />
+        <input type="button" value="查看图片" id="imgshow_10"  onmouseover="show(this.id)" onmouseout="hide(this.id)"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="narrow-label">问答1</td>
+        <td><input type="text" name="jg_ask1" maxlength="100" value="{$article.jg_ask1|escape}" class="w300" /></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">答案1</td>
+        <td><textarea name="jg_answer1" id="jg_answer1" cols="40" rows="5">{$article.jg_answer1|escape}</textarea></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">问答2</td>
+        <td><input type="text" name="jg_ask2" maxlength="100" value="{$article.jg_ask2|escape}"  class="w300" /></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">答案2</td>
+        <td><textarea name="jg_answer2" id="jg_answer2" cols="40" rows="5">{$article.jg_answer2|escape}</textarea></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">问答3</td>
+        <td><input type="text" name="jg_ask3" maxlength="100" value="{$article.jg_ask3|escape}"  class="w300" /></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">答案3</td>
+        <td><textarea name="jg_answer3" id="jg_answer3" cols="40" rows="5">{$article.jg_answer3|escape}</textarea></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">问答4</td>
+        <td><input type="text" name="jg_ask4" maxlength="100" value="{$article.jg_ask4|escape}"  class="w300" /></td>
+      </tr>
+      <tr>
+        <td class="narrow-label">答案4</td>
+        <td><textarea name="jg_answer4" id="jg_answer4" cols="40" rows="5">{$article.jg_answer4|escape}</textarea></td>
+      </tr>
+    </table>
+
+    <table width="90%" id="detail-table" style="display:none">
+     <tr><td>{$FCKeditor}</td></tr>
+    </table>
+
+    <table width="90%" id="goods-table" style="display:none">
+      <!-- 商品搜索 -->
+      <tr>
+      <td colspan="5">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        <!-- 分类 -->
+        <select name="cat_id"><option value="0">{$lang.all_category}</caption>{$goods_cat_list}</select>
+        <!-- 品牌 -->
+        <select name="brand_id"><option value="0">{$lang.all_brand}</caption>{html_options options=$brand_list}</select>
+        <!-- 关键字 -->
+        <input type="text" name="keyword" size="30" />
+        <input type="button" value="{$lang.button_search}" onclick="searchGoods()" class="button" />
+      <td>
+      </tr>
+      <!-- 商品列表 -->
+      <tr>
+        <th>{$lang.all_goods}</th>
+        <th>{$lang.handler}</th>
+        <th>{$lang.send_bouns_goods}</th>
+      </tr>
+      <tr>
+        <td width="45%" align="center">
+          <select name="source_select" size="20" style="width:90%" ondblclick="sz.addItem(false, 'add_link_goods', articleId)" multiple="true">
+          </select>
+        </td>
+        <td align="center">
+          <p><input type="button" value="&gt;&gt;" onclick="sz.addItem(true, 'add_link_goods', articleId)" class="button" /></p>
+          <p><input type="button" value="&gt;" onclick="sz.addItem(false, 'add_link_goods', articleId)" class="button" /></p>
+          <p><input type="button" value="&lt;" onclick="sz.dropItem(false, 'drop_link_goods', articleId)" class="button" /></p>
+          <p><input type="button" value="&lt;&lt;" onclick="sz.dropItem(true, 'drop_link_goods', articleId)" class="button" /></p>
+        </td>
+        <td width="45%" align="center">
+          <select name="target_select" multiple="true" size="20" style="width:90%" ondblclick="sz.dropItem(false, 'drop_link_goods', articleId)">
+            {foreach from=$goods_list item=goods}
+            <option value="{$goods.goods_id}">{$goods.goods_name}</option>
+            {/foreach}
+          </select>
+        </td>
+      </tr>
+    </table>
+    
+    <style>
+	#show_img_div{ display:none; position:absolute; right:0px; bottom:0px; width:300px; height:300px; z-index:999999;}
+	#show_img_div img{ width:100%;}
+	</style>
+   
+	<div id="show_img_div">
+    	<img src="" id="show_img_img"/>
+    </div>
+     <script>
+	
+	function show(id){
+		var t=document.getElementById(id+"_1");
+		b=t.value;
+		document.getElementById("show_img_img").src="../"+b;
+		document.getElementById("show_img_div").style.display="block";
+	}
+	
+	function hide(id){
+		document.getElementById("show_img_div").style.display="none";
+	}
+	
+    </script>
+    
+    <div class="button-div">
+      <input type="hidden" name="act" value="{$form_action}_jg" />
+      <input type="hidden" name="old_title" value="{$article.jg_name}"/>
+      <input type="hidden" name="id" value="{$article.id}" />
+      <input type="submit" value="{$lang.button_submit}" class="button"  />
+      <input type="reset" value="{$lang.button_reset}" class="button" />
+    </div>
+    </form>
+  </div>
+
+</div>
+<!-- end goods form -->
+<script language="JavaScript">
+
+var articleId = {$article.article_id|default:0};
+var elements  = document.forms['theForm'].elements;
+var sz        = new SelectZone(1, elements['source_select'], elements['target_select'], '');
+
+{literal}
+onload = function()
+{
+  // 开始检查订单
+  startCheckOrder();
+}
+
+function validate()
+{
+  var validator = new Validator('theForm');
+  validator.required('title', no_title);
+{/literal}
+
+
+
+{literal}
+
+  return validator.passed();
+}
+
+document.getElementById("tabbar-div").onmouseover = function(e)
+{
+    var obj = Utils.srcElement(e);
+
+    if (obj.className == "tab-back")
+    {
+        obj.className = "tab-hover";
+    }
+}
+
+document.getElementById("tabbar-div").onmouseout = function(e)
+{
+    var obj = Utils.srcElement(e);
+
+    if (obj.className == "tab-hover")
+    {
+        obj.className = "tab-back";
+    }
+}
+
+document.getElementById("tabbar-div").onclick = function(e)
+{
+    var obj = Utils.srcElement(e);
+
+    if (obj.className == "tab-front")
+    {
+        return;
+    }
+    else
+    {
+        objTable = obj.id.substring(0, obj.id.lastIndexOf("-")) + "-table";
+
+        var tables = document.getElementsByTagName("table");
+        var spans  = document.getElementsByTagName("span");
+
+        for (i = 0; i < tables.length; i++)
+        {
+            if (tables[i].id == objTable)
+            {
+                tables[i].style.display = (Browser.isIE) ? "block" : "table";
+            }
+            else
+            {
+                tables[i].style.display = "none";
+            }
+        }
+        for (i = 0; spans.length; i++)
+        {
+            if (spans[i].className == "tab-front")
+            {
+                spans[i].className = "tab-back";
+                obj.className = "tab-front";
+                break;
+            }
+        }
+    }
+}
+
+function showNotice(objId)
+{
+    var obj = document.getElementById(objId);
+
+    if (obj)
+    {
+        if (obj.style.display != "block")
+        {
+            obj.style.display = "block";
+        }
+        else
+        {
+            obj.style.display = "none";
+        }
+    }
+}
+
+function searchGoods()
+{
+    var elements  = document.forms['theForm'].elements;
+    var filters   = new Object;
+
+    filters.cat_id = elements['cat_id'].value;
+    filters.brand_id = elements['brand_id'].value;
+    filters.keyword = Utils.trim(elements['keyword'].value);
+
+    sz.loadOptions('get_goods_list', filters);
+}
+{/literal}
+
+/**
+ * 选取上级分类时判断选定的分类是不是底层分类
+ */
+function catChanged()
+{
+  var obj = document.forms['theForm'].elements['article_cat'];
+
+  cat_type = obj.options[obj.selectedIndex].getAttribute('cat_type');
+  if (cat_type == undefined)
+  {
+    cat_type = 1;
+  }
+
+  if ((obj.selectedIndex > 0) && (cat_type == 2 || cat_type == 4))
+  {
+    alert(not_allow_add);
+    obj.selectedIndex = 0;
+    return false;
+  }
+
+  return true;
+}
+</script>
+{include file="pagefooter.htm"}

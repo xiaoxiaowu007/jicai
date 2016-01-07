@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/style2.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"> 
+<link rel="stylesheet" type="text/css" href="css/index.css"> 
+<link rel="stylesheet" type="text/css" href="css/zk.css"> 
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/superslide.2.1.js"></script>
+<script type="text/javascript" src="js/jquery.movebg.js"></script>
+<style type="text/css">
+body {
+	background-image: url(images/index_bg.png);
+	background-repeat: repeat-x;
+}
+img.wp-smiley,img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+</head>
+<body>
+<!--头部-->
+<div id="head_box">
+<div class="g_header"> 
+   <div class="topbg"> 
+    <div class="wrap1300 clearFix"> 
+     <ul class="hd_l fl"> 
+      <li> <a class="collection" href="javascript:;">欢迎访问吉采电子商务平台</a> <a class="login" href="login.html">登录</a> <a class="register" href="register.html">注册</a> 
+        <div class="app_pos"> 
+         
+        </div> 
+ </li> 
+     </ul> 
+     <a class="order fl" href="javascript:;">我的订单</a> 
+     <a href="#" class="lianjie_001">我的吉采</a>
+<ul class="hd_r fr clearFix"> 
+  <li class="fl hd_r_list"> 
+       <div class="text_limit"> 
+        <a class="text" href="javascript:;">服务中心<span class="line_r"></span> <span class="arrow_r"></span> </a> 
+       </div> 
+       <ul class="admin_pos"> 
+        <li> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> <a href="javascript:;">服务中心</a> </li> 
+       </ul> </li> 
+       
+      <li class="fl hd_r_list"> 
+       <div class="text_limit"> 
+        <a class="text" href="javascript:;">直销店招商<span class="line_r"></span> <span class="arrow_r"></span> </a> 
+       </div> 
+       <ul class="admin_pos"> 
+        <li> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> <a href="javascript:;">直销店招商</a> </li> 
+       </ul> </li> 
+     <li class="fl hd_r_list"> 
+       <div class="text_limit"> 
+        <a class="text" href="javascript:;">材料商查询<span class="line_r"></span> <span class="arrow_r"></span> </a> 
+       </div> 
+       <ul class="admin_pos"> 
+        <li> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> <a href="javascript:;">材料商查询</a> </li> 
+       </ul> </li> 
+      <li class="fl hd_r_list"> 
+       <div class="text_limit"> 
+        <a class="text" href="javascript:;">经销商查询 <span class="line_r"></span> <span class="arrow_r"></span> </a> 
+       </div> 
+       <ul class="admin_pos wid92"> 
+        <li> <a href="javascript:;">经销商查询</a> <a href="javascript:;">经销商查询</a> <a href="javascript:;">经销商查询</a> <a href="javascript:;">经销商查询</a> <a href="javascript:;">经销商查询</a> </li> 
+       </ul> </li> 
+      <li class="fl hd_r_list"> 
+       <div class="text_limit"> 
+        <a class="text" href="javascript:;">技工招聘 <span class="line_r"></span> <span class="arrow_r"></span> </a> 
+       </div> 
+       <ul class="admin_pos wid92"> 
+        <li> <a href="javascript:;">技工招聘</a> <a href="javascript:;">技工招聘</a> <a href="javascript:;">技工招聘</a> </li> 
+       </ul> </li> 
+      <li class="fl hd_r_list"> 
+       <div class="text_limit"> 
+       </div> 
+        </li> 
+   </ul> 
+    </div> 
+   </div>
+  </div> 
+
+</div>
+<div class="clear"></div>
+<div class="header_logo">
+ <div class="logo">
+       <a href="index.html" title="欢迎吉采电子"><img src="images/index_01.png" alt="欢迎吉采电子" /></a>
+     </div>
+     <div class="logo_1"><img src="images/index_02.png" width="159" height="42" /></div>
+<dl class="se_1">
+    	<dt><input placeholder="请输入关键词"> <button>搜索</button></dt>
+        <dd>热门搜索: <a href="#">德国进口橱柜</a> <a href="#">拼花地板</a> <a href="#">意大利浴缸</a><a href="#">西班牙艺术瓷砖</a></dd>
+    </dl>
+    <div class="logo_2"><a href="#"><img src="images/index_03_1.png" width="73" height="66" /><span>意大利原装进口</span></a>
+      <p><a href="#">每日推荐一款特价</a></p>
+    </div>
+    <div class="logo_3"><img src="images/index_04_1.png" width="29" height="21" /><span>0</span><a href="#"><p>购物车</p></a></div>
+     
+</div>
+<div class="nav_0">   
+<ul class="menu_01">
+<li><a href="#" class="fixed_0">网站首页</a></li>
+<li><a href="#">关于我们</a></li>
+<li><a href="#">新闻动态</a></li>
+<li><a href="#">公司公告</a></li>
+<li><a href="#">互动留言</a></li>
+<li><a href="#">采购须知</a></li>
+<li><a href="#">业务应用</a></li>
+<li><a href="#">装修效果</a></li>
+<a href="#"><span><img src="images/map.png" width="10" height="14" />网站地图</span></a>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="content_02">
+<div class="Focus">
+	<div class="FocusIn">
+		<div class="bd">
+			<ul>
+				<li><a href="#"><img src="images/pic1.png" /></a></li>
+				<li><a href="#"><img src="images/pic2.jpg" /></a></li>
+				<li><a href="#"><img src="images/pic3.jpg" /></a></li>
+				<li><a href="#"><img src="images/pic4.jpg" /></a></li>
+			</ul>
+		</div>
+		<div class="hd">
+			<ul>
+				<li><img src="images/pic1_s.png" /></li>
+				<li><img src="images/pic2_s.png" /></li>
+				<li><img src="images/pic3_s.png" /></li>
+				<li><img src="images/pic4_s.png" /></li>
+			</ul>
+		</div>
+	</div>
+	<a class="prev" href="javascript:void(0)"></a>
+	<a class="next" href="javascript:void(0)"></a>
+</div>
+  
+<script type="text/javascript">
+$(".Focus").slide({
+	mainCell:".bd ul", 
+	effect:"fold", 
+	delayTime:300, 
+	autoPlay:true 
+});
+
+function moveBtn(){
+	var prev=$(".Focus .prev");
+	var next=$(".Focus .next");
+	var body_w = document.body.clientWidth;
+	var side_w = (body_w - 1240) / 2 -50;
+	if(body_w< 1080){
+		prev.animate({"left":30, "opacity":0.5});
+		next.animate({"right":30, "opacity":0.5});
+	}else{
+		prev.animate({"left":side_w, "opacity":0.5});
+		next.animate({"right":side_w, "opacity":0.5});
+	}
+}
+
+moveBtn();
+
+$(window).resize(function(){
+	moveBtn();
+});
+</script>
+<div class="clear"></div>
+<div class="title_big_01"></div>
+<div class="clear"></div>
+<div class="designer_01">
+<div class="designer_02"><a href="#"><img src="images/jg_05.png" width="61" height="25" /></a></div>
+<ul class="designer_01_1">
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+<li><a href="#"><img src="images/jg_03.png" width="321" height="512" /><img src="images/jg_06.png" width="322" height="53" />
+</a>
+  <a href="#"><span>more</span></a>
+  <p><a href="#">姓名：某某某</a></p>
+<p><a href="#">在2000年曾获得xxxxx奖项</a></p>
+<p><a href="#">先居住北京，成立xxxxx工作室</a></p>
+<p><a href="#">对工作认真负责，团结集体</a></p>
+</li>
+</ul>
+</div>
+<div class="right_next"><a href="#">next</a></div>
+
+<div class="clear"></div>
+<div class="xian"></div>
+<div class="clear"></div>
+<div class="link_jxdz_jigong" ><img src="images/jigong.png" width="373" height="91" /></div>
+<div class="partner">
+<ul class="cooperation">
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+<li><a href="#"><img src="images/index_15.png" width="140" height="40" />雷士照明</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+
+
+</div>
+</div>
+  <div class="clear"></div>
+  <div class="web_down">
+<div class="clear"></div>
+<div class="two_code"><img src="images/login-d.png" width="1100" height="212" /></div>
+
+
+</div>
+ <!--侧边漂浮边栏-->
+    <div class="side_bar hide">
+        <ul>
+            <li><a href="#foot" style="background-color: #f4a404;">在线咨询</a> </li>
+            <li><a href="#foot" style="background-color: #f4a404;">购物车</a> </li>
+            <li><a href="#foot" style="background-color: #f4a404;">招贤纳士</a> </li>
+            <li><a href="#foot" style="background-color: #f4a404;">二维码</a> </li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>

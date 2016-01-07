@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="/themes/ecmoban_meilishuo/mb.css" rel="stylesheet" type="text/css" />
+
+
+<link href="/themes/ecmoban_meilishuo/fullfoucs.css" rel="stylesheet" />
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,jquery-1.7.2.min.js'}
+<script src="/themes/ecmoban_meilishuo/js/jquery.fullfoucs.js" type="text/javascript"></script>
+
+</head>
+<style>
+.map_div{ position:relative;}
+.ppt{ position:absolute; background:url(images/22t.png); width:21px; height:32px; left:0px; top:0px; cursor:pointer;}
+.pos1{  left: 303px; top: 65px;}
+.pos2{   left: 470px; top: 296px;}
+.pos3{  left: 350px; top: 411px;}
+.pos4{ left: 585px; top: 400px;}
+.pos5{   left: 657px; top: 403px;}
+.pos6{    left: 672px; top: 459px;}
+.pos7{    left: 728px; top: 463px;}
+.pos8{  left: 352px; top: 528px;}
+.pos9{    left: 481px;  top: 567px;}
+.pos10{   left: 470px; top: 496px;}
+.pos11{   left: 711px; top: 528px;}
+.pos12{    left: 722px; top: 565px;}
+.pos13{   left: 657px; top: 632px;}
+.ppt a{ display:block; width:100%; height:100%;}
+.page_now{ color:#b7d8ee !important;}
+.pagebar a:hover{ background:#b7d8ee; color:#fff;}
+.content_04{ display:none;}
+.pp{ display:none !important;}
+.img_show{ display:none;}
+#index_ex_slide{ position:absolute; left:0px; top:0px; z-index:999999; width:100%;}
+#index_ex_slide li a{ display:block; height:100%; width:100%;}
+.close{ position:fixed; width:50px; height:50px; text-align:center; line-height:50px; right:50px; top:50px; background:rgba(0,0,0,0.8); cursor:pointer; z-index:9999999;}
+.img_btn{ width:900px; margin:40px auto;}
+</style>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header2.lbi" --><!-- #EndLibraryItem -->
+
+<div class="content_02">
+<div class="title_06"><span>{$lanmu_name}</span>  <a href="#">按地区划分</a></div>
+<div class="content_04" {if $cat eq 4}style="display:block;"{/if}>
+	<div class="map_div">
+    	<img src="images/map_01.jpg"/>
+        <div class="pos1 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=大兴安岭地区" title="大兴安岭地区"></a></div>
+        <div class="pos2 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=黑河"  title="黑河"></a></div>
+        <div class="pos3 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=齐齐哈尔"  title="齐齐哈尔"></a></div>
+        <div class="pos4 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=伊春"  title="伊春"></a></div>
+        <div class="pos5 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=鹤岗"  title="鹤岗"></a></div>
+        <div class="pos6 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=佳木斯"  title="佳木斯"></a></div>
+        <div class="pos7 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=双鸭山"  title="双鸭山"></a></div>
+        <div class="pos8 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=大庆"  title="大庆"></a></div>
+        <div class="pos9 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=哈尔滨"  title="哈尔滨"></a></div>
+        <div class="pos10 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=绥化"  title="绥化"></a></div>
+        <div class="pos11 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=七台河"  title="七台河"></a></div>
+        <div class="pos12 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=鸡西"  title="鸡西"></a></div>
+        <div class="pos13 ppt"><a href="/article_list0.php?cat_id={$cat}&keywords=牡丹江"  title="牡丹江"></a></div>
+</div>
+  <script>
+  	$(".map_div .ppt").hover(function(){
+		$(this).css("background","url(/themes/ecmoban_meilishuo/images/22i.png)");
+	},function(){
+		$(this).css("background","url(/themes/ecmoban_meilishuo/images/22t.png)");
+	});
+	
+	
+	
+  </script>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="link_xx_01">
+  <tbody><tr>
+    <th>店铺名称</th>
+    <th>地址</th>
+    <th>联系电话</th>
+  </tr>
+  <!-- {foreach from=$artciles_list item=article} -->
+  <tr>
+    <td><a href="/article.php?id={$article.id}&type=fu">{$article.name}</a></td>
+    <td><a>{$article.address}</a></td>
+    <td><a>{$article.telphone}</a></td>
+  </tr>
+  <!-- {/foreach} -->
+  
+</tbody></table>
+<div class="msdn">
+
+<!-- #BeginLibraryItem "/library/pages1.lbi" --><!-- #EndLibraryItem -->
+
+</div>
+
+</div>
+
+<div class="img_show" style="{if $cat eq 4}display:block;{/if}position:absolute;left:0px;top:0px;width:100%; z-index:999999;">
+	<div class="close" style="display:none;">关闭</div>
+	<ol class="flash mid12 tt pp" id="index_ex_slide">
+        
+	</ol>
+	
+    <ol class="midd1 pp">
+    
+    
+    <!-- {foreach from=$fen1 item=article} -->
+    <li><a><img class="lazy" src="{$article.url}" alt="" /></a></li>
+    <!-- {/foreach} -->
+        
+	</ol>
+    
+    <ol class="midd2 pp">
+    
+    <!-- {foreach from=$fen2 item=article} -->
+    <li><a><img class="lazy" src="{$article.url}" alt="" /></a></li>
+    <!-- {/foreach} -->
+        
+	</ol>
+    
+    <ol class="midd3 pp">
+    
+    <!-- {foreach from=$fen3 item=article} -->
+    <li><a><img class="lazy" src="{$article.url}" alt="" /></a></li>
+    <!-- {/foreach} -->
+	</ol>
+    
+    <ol class="midd4 pp">
+    
+    <!-- {foreach from=$fen4 item=article} -->
+    <li><a><img class="lazy" src="{$article.url}" alt="" /></a></li>
+    <!-- {/foreach} -->
+	</ol>
+    
+    <ol class="midd5 pp">
+    
+    <!-- {foreach from=$fen5 item=article} -->
+    <li><a><img class="lazy" src="{$article.url}" alt="" /></a></li>
+    <!-- {/foreach} -->
+	</ol>
+    
+    <ol class="midd6 pp">
+    
+    <!-- {foreach from=$fen6 item=article} -->
+    <li><a><img class="lazy" src="{$article.url}" alt="" /></a></li>
+    <!-- {/foreach} -->
+	</ol>
+    
+    
+     
+    
+
+	<script type="text/javascript">
+	
+	$.fullFoucs({
+		direction: 'down'
+	});
+	
+	$(function(){
+	var h1=window.innerHeight;
+	var h2 =$("body").height();
+
+	$(".fen1").click(function(){
+			$(".close").show();
+			$(".content_02").hide();
+			$("#index_ex_slide").height(h1);
+			$("body").height(h1);
+			var ttp = $(".midd1").html();
+			$("#index_ex_slide").removeClass("pp");
+			$("#index_ex_slide").html(ttp);
+			$("body").css("overflow","hidden");
+	});
+
+	$(".fen2").click(function(){
+		
+			$("#index_ex_slide").height(h1);
+			$("body").height(h1);
+			$(".content_02").hide();
+			var ttp = $(".midd2").html();
+			$("#index_ex_slide").removeClass("pp");
+			$("#index_ex_slide").html(ttp);
+			$(".close").show();
+			
+	});
+	
+	$(".fen3").click(function(){
+		
+			$("#index_ex_slide").height(h1);
+			$("body").height(h1);
+			$(".content_02").hide();
+			var ttp = $(".midd3").html();
+			$("#index_ex_slide").removeClass("pp");
+			$("#index_ex_slide").html(ttp);
+			$(".close").show();
+			
+	});
+	
+	$(".fen4").click(function(){
+		
+			$("#index_ex_slide").height(h1);
+			$("body").height(h1);
+			$(".content_02").hide();
+			var ttp = $(".midd4").html();
+			$("#index_ex_slide").removeClass("pp");
+			$("#index_ex_slide").html(ttp);
+			$(".close").show();
+			
+	});
+	
+	$(".fen5").click(function(){
+		
+			$("#index_ex_slide").height(h1);
+			$("body").height(h1);
+			$(".content_02").hide();
+			var ttp = $(".midd5").html();
+			$("#index_ex_slide").removeClass("pp");
+			$("#index_ex_slide").html(ttp);
+			$(".close").show();
+			
+	});
+	
+	$(".fen6").click(function(){
+		
+			$("#index_ex_slide").height(h1);
+			$("body").height(h1);
+			$(".content_02").hide();
+			var ttp = $(".midd6").html();
+			$("#index_ex_slide").removeClass("pp");
+			$("#index_ex_slide").html(ttp);
+			$(".close").show();
+			
+	});
+
+	
+	$(".close").click(function(){
+		$("#flash_control").addClass("pp");
+		$("#index_ex_slide").addClass("pp");
+		$("body").css("height",h2);
+		$(".close").hide();
+		$(".content_02").show();
+		$("body").css("overflow","");
+	});		
+		
+		
+	});
+	
+	</script>
+
+</div>
+<style>
+.img_btn input{  width:120px; height:40px;  cursor:pointer; margin:0 15px; border:0px; background:#777; color:#fff; font-family:'Microsoft Yahei';}
+.img_btn input:focus{ background:#000; border:0px;}
+
+</style> 
+  
+<!-- {if $cat eq "4"} -->
+<div class="img_btn">
+    	<input type="button" value="综合" class="fen1"/><input type="button" value="样板" class="fen2"/><input type="button" value="商品" class="fen3"/><input type="button" value="广告" class="fen4"/><input type="button" value="特价" class="fen5"/><input type="button" value="专题" class="fen6"/>
+    </div>
+<!-- {/if} -->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+document.getElementById('cur_url').value = window.location.href;
+</script>
+</html>

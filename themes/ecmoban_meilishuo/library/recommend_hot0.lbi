@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="xm-box more11">
+<h4 class="title"><span>热卖商品</span> <a class="more" href="../search.php?intro=hot">更多</a></h4>
+<div id="show_hot_area" class="clearfix">
+  <!-- {/if} -->
+  <!--{foreach from=$hot_goods item=goods}-->
+  <div class="goodsItem">
+       
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>    
+		    
+        </div>
+  <!--{/foreach}-->
+ 
+  <!-- {if $cat_rec_sign neq 1} -->
+  </div>
+
+</div>
+<div class="blank"></div>
+  <!-- {/if} -->
+<!-- {/if} -->
+<style>
+
+.more11{ width:1200px; margin:0 auto; margin-top:20px;}
+.more11 .goodsItem .goodsimg{width: 187px; height:auto !important;}
+.more11 .goodsItem{ width:188px; height:auto !important;}
+.more11 .goodsItem p{ text-align:center;}
+.more11 .goodsItem p a:hover{ text-decoration:none;}
+.more11 .title span{  float: left;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  text-align: left;
+  font-weight: bold;
+  color: #666;
+  padding-left: 5px;
+  font-family: "微软雅黑";}
+</style>

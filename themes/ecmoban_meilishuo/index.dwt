@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="/themes/ecmoban_meilishuo/mb.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+
+
+
+<!--备用样式表-->
+
+{* 包含脚本文件 *}
+{insert_scripts files='jquery-1.7.2.min.js,jquery.movebg.js'}
+
+</head>
+<body class="index_page" style="min-width:1200px;">
+
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+
+<!--推荐分类-->
+<div class="classification">
+	<div style="display:none;">
+    <!--{foreach from=$categories item=tuijian_tree}-->
+    <li><a href="/category.php?id={$tuijian_tree.cat_id}">{$tuijian_tree.cat_name}</a></li>
+    <!--{/foreach}-->
+    
+    </div>
+  <div class="title_02"><span>热门商城分类</span></div>
+  <ul class="cf clearfix">
+     <!--{foreach from=$categories item=tuijian_tree}-->
+    <li><a href="/category.php?id={$tuijian_tree.cat_id}">{$tuijian_tree.cat_name}</a></li>
+    <!--{/foreach}-->
+  </ul>
+</div>
+
+<!--活动-->
+<div class="activity_bg">
+    <div class="title_01">
+      <div class="title_01_left"></div>
+      <div class="title_01_right">
+        <ul class="color_c">
+          <li class="color_01 tt"><a href="javascript:void(0)">综合</a></li>
+          
+          <!--{foreach from=$cat_new item=goods}-->
+          
+          	<li class="t3 tt"><a href="javascript:void(0)">{$goods.cat_name}</a></li>
+          
+          <!--{/foreach}-->
+          
+          
+          <li class="color_13"><a href="/category.php?id=705" target="_blank">更多</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <Script>
+		$(function(){
+			col=$(".color_c .t3");
+			len = col.length;
+			for(var i = 2;i<= (len+1);i++){
+				$(".color_c .t3").eq(i-2).addClass("color_"+i);
+			}
+		})
+	</script>
+    
+    <div class="exhibition_01_left">
+    
+    
+        <ul class="ex">
+        
+          <!--{foreach from=$zhonghe item=goods}-->
+          
+          <li><a href="/goods.php?id={$goods.goods_id}"><img src="{$goods.original_img}" width="192" height="200"> </a> <a href="/goods.php?id={$goods.goods_id}"><span>{$goods.goods_name}</span></a>
+            <p><a href="/goods.php?id={$goods.goods_id}">{$goods.goods_brief}</a></p>
+            <a href="/goods.php?id={$goods.goods_id}"><b>¥{$goods.shop_price}</b></a> </li>
+            
+          <!--{/foreach}--> 
+            
+        </ul>
+        
+        
+        
+        <!--{foreach from=$tui_info item=tuijian}-->
+        
+        <ul class="ex last2">
+          <!-- {if $tuijian }  -->
+              <!--{foreach from=$tuijian item=goods}-->
+              
+              <li><a href="/goods.php?id={$goods.goods_id}"><img src="{$goods.original_img}" width="192" height="200"> </a> <a href="/goods.php?id={$goods.goods_id}"><span>{$goods.goods_name}</span></a>
+                <p><a href="/goods.php?id={$goods.goods_id}">{$goods.goods_brief}</a></p>
+                <a href="/goods.php?id={$goods.goods_id}"><b>¥{$goods.shop_price}</b></a> </li>
+                
+              <!--{/foreach}-->
+          <!-- {/if }  -->
+            
+        </ul>
+
+		<!--{/foreach}--> 
+		
+
+
+
+
+        
+        
+        <script>
+			$(function(){
+				
+				//点击切换最新产品的栏目
+				$(".color_c .tt").click(function(){
+					var k=$(this).index();
+					$(".exhibition_01_left ul").addClass("last2");
+					$(".exhibition_01_left ul").eq(k).removeClass("last2");
+				});
+				
+				//加载是判断是否显示
+				//$(".exhibition_01_left .ex").eq(0).removeClass("last2");
+				
+				
+			})
+		</script>
+        
+        
+        
+        
+      </div>
+    
+    <div class="exhibition_01_right">
+        <div class="designer">
+        	
+            <div class="des_con">
+               <a href="/article_sjs.php?cat=sjs" target="_blank"><img src="images/index_08.png" width="237" height="96"></a>
+                <a href="/article_type.php?id={$sjs.id}&type=sjs" target="_blank"><img src="{$sjs.rec_img}" width="212" height="110"></a>
+                <div class="designer_text">
+                <span><a href="/article_type.php?id={$sjs.id}&type=sjs" target="_blank">{$sjs.sjs_name}</a></span>
+                <p><a href="/article_type.php?id={$sjs.id}&type=sjs" target="_blank">工作年限：{$sjs.experience}</a></p>
+                <p><a href="/article_type.php?id={$sjs.id}&type=sjs" target="_blank">{$sjs.sjs_brief}</a></p>
+                </div>
+            </div>
+          
+            
+            
+            <div class="des_con" style="margin-top: 15px;">
+                <a href="/article_sjs.php?cat=jg" target="_blank"><img src="images/jgzj.jpg" width="236" height="96"></a>
+                <a href="/article_type.php?id={$jg.id}&type=jg" target="_blank"><img src="{$jg.rec_img}" width="212" height="110"></a>
+                <div class="designer_text"><span><a href="/article_type.php?id={$jg.id}&type=jg" target="_blank">{$jg.jg_name}</a></span>
+                <p><a href="/article_type.php?id={$sjs.id}&type=sjs" target="_blank">工作年限：{$jg.experience}</a></p>
+                  <p><a href="/article_type.php?id={$jg.id}&type=jg" target="_blank">{$jg.jg_brief}</a></p>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+</div>
+
+
+
+<!--right end-->
+
+<!--f1-->
+  <div class="clear"></div>
+  <div class="f1_commodity" id="foot">
+    <div class="f1_commodity_left">
+      <ul>
+      <!--{foreach from=$categories1 item=childer}-->
+        <li><a href="{$childer.url|escape:html}">{$childer.name|escape:html}</a></li>
+      <!--{/foreach}-->
+      <li><a href="/category.php?id=1">更多</a></li>
+        
+        
+      </ul>
+      <img src="images/index_10_1.png" width="220" height="220" /> </div>
+    <div class="f1_commodity_right">
+      <div class="title_commodity"></div>
+      <div class="commodity_top">
+      	<ul class="top">
+        
+          <!--{foreach from=$best1 item=best_goods1}-->
+          <li class="big_t"><a href="/goods.php?id={$best_goods1.goods_id}"><img src="{$best_goods1.original_img}" width="441" height="233" /></a></li>
+          <!--{/foreach}-->
+          
+          <!--{foreach from=$hot_goods1 item=hot_goods1}-->
+          <li><a href="/goods.php?id={$hot_goods1.goods_id}"><img src="{$hot_goods1.original_img}" height="118" width="138" /></a><a href="/goods.php?id={$hot_goods1.goods_id}" class="tit_name"><span>{$hot_goods1.goods_name}</span></a>
+            <!--<p><a href="{$hot_goods1.goods_id}" class="tit_brief">{$hot_goods1.brief}</a></p>-->
+            <a href="/goods.php?id={$hot_goods1.goods_id}" style="text-align:center;  display: block;">吉采价：￥<b>{$hot_goods1.shop_price}</b>元</a>
+            <p style="text-align:center;"><i style="text-decoration:line-through;">市场价：￥{$hot_goods1.market_price}元</i></p>
+            </li>
+          <!--{/foreach}-->
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<!--f2-->
+  <div class="clear"></div>
+  <div class="f2_commodity">
+    <div class="f2_commodity_left">
+      <ul>
+        <!--{foreach from=$categories2 item=childer}-->
+        <li><a href="{$childer.url|escape:html}">{$childer.name|escape:html}</a></li>
+        <!--{/foreach}-->
+        <li><a href="/category.php?id=2">更多</a></li>
+      </ul>
+      <img src="images/index_11_1.png" width="220" height="220" /> </div>
+    <div class="f2_commodity_right">
+      <div class="title_commodity"></div>
+      <div class="commodity_top">
+      	<ul class="top">
+        
+          <!--{foreach from=$best2 item=best_goods2}-->
+          <li class="big_t"><a href="/goods.php?id={$best_goods2.goods_id}"><img src="{$best_goods2.original_img}" width="441" height="233" /></a></li>
+          <!--{/foreach}-->
+                 
+          <!--{foreach from=$hot_goods2 item=hot_goods2}-->
+          <li><a href="/goods.php?id={$hot_goods2.goods_id}"><img src="{$hot_goods2.original_img}" height="118" width="138" /></a><a href="{$hot_goods2.goods_id}" class="tit_name"><span>{$hot_goods2.goods_name}</span></a>
+            <!--<p><a href="{$hot_goods2.url}">{$hot_goods2.brief}</a></p>
+            <a href="{$hot_goods2.url}">￥<b>{$hot_goods2.shop_price}</b>元</a>-->
+            
+            <a href="/goods.php?id={$hot_goods2.goods_id}" style="text-align:center;  display: block;">吉采价：￥<b>{$hot_goods2.shop_price}</b>元</a>
+            <p style="text-align:center;"><i style="text-decoration:line-through;">市场价：￥{$hot_goods2.market_price}元</i></p>
+            </li>
+          <!--{/foreach}-->
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!--f3-->
+  <div class="clear"></div>
+  <div class="f3_commodity">
+    <div class="f3_commodity_left">
+      <ul>
+        <!--{foreach from=$categories3 item=childer}-->
+        <li><a href="{$childer.url|escape:html}">{$childer.name|escape:html}</a></li>
+        <!--{/foreach}-->
+        <li><a href="/category.php?id=3">更多</a></li>
+      </ul>
+      <img src="images/index_12_1.png" width="220" height="220" /> </div>
+    <div class="f3_commodity_right">
+      <div class="title_commodity"></div>
+      <div class="commodity_top">
+      	<ul class="top">
+        
+         <!--{foreach from=$best3 item=best_goods3}-->
+          <li class="big_t"><a href="/goods.php?id={$best_goods3.goods_id}"><img src="{$best_goods3.original_img}" width="441" height="233" /></a></li>
+          <!--{/foreach}-->
+          
+          <!--{foreach from=$hot_goods3 item=hot_goods3}-->
+          <li><a href="/goods.php?id={$hot_goods3.goods_id}"><img src="{$hot_goods3.original_img}" height="118" width="138" /></a><a href="/goods.php?id={$hot_goods3.goods_id}" class="tit_name"><span>{$hot_goods3.goods_name}</span></a>
+            <!--<p><a href="{$hot_goods3.goods_id}">{$hot_goods3.brief}</a></p>
+            <a href="{$hot_goods3.goods_id}">￥<b>{$hot_goods3.shop_price}</b>元</a>-->
+            
+            
+            <a href="/goods.php?id={$hot_goods3.goods_id}" style="text-align:center;  display: block;">吉采价：￥<b>{$hot_goods3.shop_price}</b>元</a>
+            <p style="text-align:center;"><i style="text-decoration:line-through;">市场价：￥{$hot_goods3.market_price}元</i></p>
+           
+            </li>
+          <!--{/foreach}-->
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!--f4-->
+  <div class="clear"></div>
+  <div class="f4_commodity">
+    <div class="f4_commodity_left">
+      <ul>
+        <!--{foreach from=$categories4 item=childer}-->
+        <li><a href="{$childer.url|escape:html}">{$childer.name|escape:html}</a></li>
+        <!--{/foreach}-->
+        <li><a href="/category.php?id=4">更多</a></li>
+      </ul>
+      <img src="images/index_13_1.png" width="220" height="220" /> </div>
+    <div class="f4_commodity_right">
+      <div class="title_commodity"></div>
+      <div class="commodity_top">
+      
+      <ul class="top">
+      
+          <!--{foreach from=$best4 item=best_goods4}-->
+          <li class="big_t"><a href="/goods.php?id={$best_goods4.goods_id}"><img src="{$best_goods4.original_img}" width="441" height="233" /></a></li>
+          <!--{/foreach}-->
+          
+          <!--{foreach from=$hot_goods4 item=hot_goods4}-->
+          <li><a href="/goods.php?id={$hot_goods4.goods_id}"><img src="{$hot_goods4.original_img}" height="118" width="138" /></a><a href="/goods.php?id={$hot_goods4.goods_id}" class="tit_name"><span>{$hot_goods4.goods_name}</span></a>
+            <!--<p><a href="{$hot_goods4.url}">{$hot_goods4.brief}</a></p>
+            <a href="{$hot_goods4.url}">￥<b>{$hot_goods4.shop_price}</b>元</a>-->
+            
+            <a href="/goods.php?id={$hot_goods4.goods_id}" style="text-align:center;  display: block;">吉采价：￥<b>{$hot_goods4.shop_price}</b>元</a>
+            <p style="text-align:center;"><i style="text-decoration:line-through;">市场价：￥{$hot_goods4.market_price}元</i></p>
+            
+            </li>
+          <!--{/foreach}-->
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!--f5-->
+  <div class="clear"></div>
+  <div class="f5_commodity">
+    <div class="f5_commodity_left">
+      <ul>
+        <!--{foreach from=$categories5 item=childer}-->
+        <li><a href="{$childer.url|escape:html}">{$childer.name|escape:html}</a></li>
+        <!--{/foreach}-->
+        <li><a href="/category.php?id=5">更多</a></li>
+      </ul>
+      <img src="images/index_14_1.png" width="220" height="220" /> </div>
+    <div class="f5_commodity_right">
+      <div class="title_commodity"></div>
+      <div class="commodity_top">
+      	<ul class="top">
+        
+          <!--{foreach from=$best5 item=goods5}-->
+          <li class="big_t"><a href="/goods.php?id={$goods5.goods_id}"><img src="{$goods5.original_img}" width="441" height="233" /></a></li>
+          <!--{/foreach}-->
+          
+          <!--{foreach from=$hot5 item=hot5}-->
+          <li><a href="goods.php?id={$hot5.goods_id}"><img src="{$hot5.original_img}" height="118" width="138" /></a><a href="goods.php?id={$hot5.goods_id}" class="tit_name"><span>{$hot5.goods_name}</span></a>
+            <!--<p><a href="{$goods5.url}">{$best00.brief}</a></p>
+            <a href="{$goods5.url}">￥<b>{$best00.shop_price}</b>元</a>-->
+            
+            <a href="goods.php?id={$hot5.goods_id}" style="text-align:center;  display: block;">吉采价：￥<b>{$hot5.shop_price}</b>元</a>
+            <p style="text-align:center;"><i style="text-decoration:line-through;">市场价：￥{$hot5.market_price}元</i></p>
+            </li>
+          <!--{/foreach}-->
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="link_bg clearfix">
+  		<div class="link_content">
+            <div class="link_jxdz" >我们的合作伙伴</div>
+            <div class="partner">
+              <ul class="cooperation">
+              <!--{if $img_links  or $txt_links }-->
+              <!--{foreach from=$img_links item=link name=bottom}--> 
+                <li>
+                	<a href="{$link.url}">
+                    	<img src="{$link.logo}" width="140" height="40" />
+                        <span>{$link.name}</span>
+                    </a>
+                </li>
+              <!--{/foreach}-->
+			  <!--{/if}--> 
+              </ul>
+            </div>
+    	</div>
+    </div>
+
+
+<script>
+
+jQuery(function($){
+    var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_='+Math.random();  
+    $.getJSON(url, function(data){
+       console.log(data.Ip); 
+	   $.post("article.php",{ip_type:"1",ip:data.Ip});
+	   
+    });
+});
+
+</script>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+ 
+
+<div class="m-app-open" style="left: 0px;{if $ads_btm eq ''}display:none;{/if};">
+<div class="box-background" style="background-color: rgb(0, 5, 25);">
+</div>
+<div class="box-inner">
+   <div class="background-img">
+       {$ads_btm}
+   </div>
+   <div class="btn-close">
+       <img src="http://img.tuniucdn.com/img/201510281940/ad_mask/btn_close.png" alt="">
+   </div>
+</div>
+</div>
+
+<style>
+.m-app-open {position: fixed;z-index: 999999;left: 0;bottom: 0;height: 140px;width: 100%;min-width: 1000px;}
+.m-app-open .box-background {position: absolute;z-index: 1;top: 0;left: 0;height: 100%;width: 100%;background: #263646;
+opacity: 0.85;filter: alpha(opacity=85);}
+.m-app-open .box-inner {position: relative;width: 1000px;margin: 0 auto;height: 100%;z-index: 2;}
+.m-app-open .background-img {position: absolute;bottom: 0;left: 0;z-index: 0;}
+.m-app-open .background-img a { position: absolute; left: 60px; bottom: 22px; width: 670px; height: 140px;z-index: 3;opacity: 1;filter: alpha(opacity=0);}
+.m-app-open .background-img img {
+    width: 1000px;
+}
+.m-app-open .btn-close {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 0;
+    cursor: pointer;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+}
+.m-app-open .btn-close img {
+    width: 39px;
+}
+</style>
+<script>
+$(".btn-close").click(function(){
+	$(".m-app-open").hide();
+});
+
+function hide(){
+	$("#show_div1").hide();
+}
+
+</script>
+<a href="http://webscan.360.cn/index/checkwebsite/url/jcdlm.com" name="097a6e1dc7e5077f2e37d2153854ba48" ></a>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

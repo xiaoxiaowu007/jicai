@@ -1,0 +1,1 @@
+"f:\phpStudy\php53n\php.exe" -q "F:\www\jicai\test.php"

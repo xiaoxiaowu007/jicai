@@ -1,0 +1,38 @@
+<!-- $Id: article_list.htm 16783 2009-11-09 09:59:06Z liuhui $ -->
+
+{if $full_page}
+{include file="pageheader1.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="POST" action="article.php?act=update_kfqq" name="listForm">
+<!-- start cat list -->
+<div class="list-div" id="listDiv">
+{/if}
+<style>
+.clearfix{zoom:1;}
+.clearfix:after{visibility:hidden;display:block;content:" ";clear:both;}
+ul li{ list-style: none; float: left; width: 33%;}
+.kefu_ul li{ margin: 5px 0px;}
+.kefu_ul li span{ display:inline-block; width:130px; text-align:right; height:26px; line-height:26px;}
+</style>
+<h3 style="text-align: center; margin: 10px 0px; height: 30px; line-height: 30px;">市场客服QQ</h3>
+<ul class="clearfix kefu_ul">
+	{foreach from=$cat_list item=val}
+	<li>
+		<span>{$val.cat_name}：</span>
+		<input type="text" name="kfqq[]" value="{$val.kfqq}"/>
+		<input type="hidden" name="cat_id[]" value="{$val.cat_id}"/>
+	</li>
+   {/foreach} 
+</ul>
+
+<input type="submit" value="确认修改" style="width:100px; height:40px; padding:5px 0px; font-size:14px; font-family:'microsoft Yahei'; text-align:center; display:block; margin:30px auto; cursor:pointer"/>
+
+{if $full_page}
+</div>
+
+</form>
+<!-- end cat list -->
+
+{include file="pagefooter.htm"}
+{/if}

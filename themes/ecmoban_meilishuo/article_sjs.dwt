@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{if $lanmu_type eq 'sjs'}设计师列表{else}技工列表{/if}--吉采电子</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="/themes/ecmoban_meilishuo/mb.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/superslide.2.1.js"></script>
+<script type="text/javascript" src="/js/jquery.movebg.js"></script>
+<style type="text/css">
+a,a:hover,a:visited{text-decoration:none !important; color:none;}
+body {
+	background-image: url(images/index_bg.png);
+	background-repeat: repeat-x;
+}
+img.wp-smiley,img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header2.lbi" --><!-- #EndLibraryItem -->
+
+
+
+<div class="content_02">
+<div class="Focus">
+	<div class="FocusIn">
+		<div class="bd">
+			<ul>
+				<li><a href="#"><img src="images/pic1.png" /></a></li>
+				<li><a href="#"><img src="images/pic2.jpg" /></a></li>
+				<li><a href="#"><img src="images/pic3.jpg" /></a></li>
+				<li><a href="#"><img src="images/pic4.jpg" /></a></li>
+			</ul>
+		</div>
+		<div class="hd">
+			<ul>
+				<li><img src="images/pic1_s.png" /></li>
+				<li><img src="images/pic2_s.png" /></li>
+				<li><img src="images/pic3_s.png" /></li>
+				<li><img src="images/pic4_s.png" /></li>
+			</ul>
+		</div>
+	</div>
+	<a class="prev" href="javascript:void(0)"></a>
+	<a class="next" href="javascript:void(0)"></a>
+</div>
+  
+<script type="text/javascript">
+$(".Focus").slide({
+	mainCell:".bd ul", 
+	effect:"fold", 
+	delayTime:300, 
+	autoPlay:true 
+});
+
+function moveBtn(){
+	var prev=$(".Focus .prev");
+	var next=$(".Focus .next");
+	var body_w = document.body.clientWidth;
+	var side_w = (body_w - 1240) / 2 -50;
+		prev.animate({"left":30, "opacity":0.5});
+		next.animate({"right":30, "opacity":0.5});
+
+}
+
+moveBtn();
+
+$(window).resize(function(){
+	moveBtn();
+});
+</script>
+<div class="clear"></div>
+<div class="title_big_01"></div>
+<div class="clear"></div>
+<div class="designer_01">
+{if $lanmu_type}<div class="designer_0222"><a href="javascript:void(0)"></a></div>{else}<div class="designer_0223"><a href="javascript:void(0)"></a></div>{/if}
+
+<ul class="designer_01_1 clearfix">
+
+<!-- {foreach from=$artciles_list item=article} -->
+<li>
+	<div class="type_list_div">
+    <a href="/article_type.php?id={$article.id}&type={$article.cat}">
+        <img src="{$article.img}" width="321" height="512" />
+    </a>
+      <p><a href="/article_type.php?id={$article.id}&type={$article.cat}">姓名：{$article.name}</a><span class="type_list_nian">工作年限：{$article.experience}</span></p>
+    <p><a href="/article_type.php?id={$article.id}&type={$article.cat}">{$article.brief}</a></p>
+    </div>
+</li>
+<!-- {/foreach} -->
+
+
+
+</ul>
+</div>
+
+<div class="page_div">
+	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+</div>
+
+
+
+<div class="clear"></div>
+<div class="xian"></div>
+<div class="clear"></div>
+
+
+</div>
+<div class="clear"></div>
+
+
+</div>
+</div>
+  
+</div>
+</div>
+
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+
+</body>
+</html>

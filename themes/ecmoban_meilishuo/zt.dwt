@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="ECSHOP v2.7.3">
+
+<meta name="Keywords" content="吉采电子">
+<meta name="Description" content="吉采电子">
+<title>吉采电子</title>
+<link rel="shortcut icon" href="http://jicai.xiaoxiaowu.info/favicon.ico">
+<link href="./zt_files/style.css" rel="stylesheet" type="text/css">
+<link href="./zt_files/mb.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./zt_files/common.js"></script></head>
+<body style="background:url({$article.file_url}) center top">
+<div style="width:1200px; margin:0 auto;">
+ {$article.content}
+</div>
+</body></html>

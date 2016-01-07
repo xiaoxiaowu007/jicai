@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="/themes/ecmoban_meilishuo/mb.css" rel="stylesheet" type="text/css" />
+<link href="/themes/ecmoban_meilishuo/box_zzjs_net.css" rel="stylesheet" type="text/css" />
+
+<script src="js/box_wwwzzjsnet.js"></script>
+
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header2.lbi" --><!-- #EndLibraryItem -->
+
+
+<div class="title_big_02"></div>
+
+<div class="designer_01 clearfix">
+    <div class="designer_03"></div>
+    <div class="title_06">
+        <ul class="color_c_0">
+        <!-- {foreach from=$children_category item=children_category} -->
+            <li class="color_01"><a href="article_list.php?category={$children_category.cat_id}">{$children_category.cat_name}</a></li>
+        <!-- {/foreach} -->
+        </ul>
+        <script>
+        	$(function(){
+				len=$(".color_c_0 li").length;
+				for(var i=0; i< len;i++){
+					$(".color_c_0 li").eq(i).addClass("color_0"+(i+1));
+				}
+			});
+        </script>
+    </div>
+    <div class="clear"></div>
+    <ul class="designer_02_1">
+    <!-- {foreach from=$artciles_list item=article} -->
+        <li><a href="{$article.file_url}" rel="clearbox[test]"><img src="{$article.file_url}" width="380" height="233"></a>
+        </li>
+     <!-- {/foreach} -->
+    </ul>
+</div>
+
+
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+document.getElementById('cur_url').value = window.location.href;
+</script>
+</html>

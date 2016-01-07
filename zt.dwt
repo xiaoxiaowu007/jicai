@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="ECSHOP v2.7.3">
+
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>吉采电子</title>
+<link rel="shortcut icon" href="http://jicai.xiaoxiaowu.info/favicon.ico">
+<link href="./zt_files/style.css" rel="stylesheet" type="text/css">
+<link href="./zt_files/mb.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./zt_files/common.js"></script></head>
+<body>
+<div style="width:1200px; margin:0 auto;">
+ <img src="img1.jpg" width="100%" usemap="#Map" border="0"/>
+ <map name="Map" id="Map">
+   <area shape="rect" coords="261,495,763,707" href="/goods.php?id=123" />
+   <area shape="rect" coords="262,721,761,933" href="/goods.php?id=284" />
+   <area shape="rect" coords="264,944,762,1155" href="/goods.php?id=315" />
+   <area shape="rect" coords="262,1248,761,1458" href="/goods.php?id=72" />
+   <area shape="rect" coords="263,1470,504,1753" href="/goods.php?id=154" />
+   <area shape="rect" coords="520,1470,762,1753" href="/goods.php?id=63" />
+   <area shape="rect" coords="264,1763,504,2044" href="/goods.php?id=67" />
+   <area shape="rect" coords="519,1764,762,2047" href="/goods.php?id=118" />
+   <area shape="rect" coords="263,2058,505,2338" href="/goods.php?id=107" />
+   <area shape="rect" coords="522,2059,755,2339" href="/goods.php?id=106" />
+   <area shape="rect" coords="264,2433,763,2641" href="/goods.php?id=66" />
+   <area shape="rect" coords="265,2659,756,2865" href="/goods.php?id=80" />
+   <area shape="rect" coords="264,2881,759,3092" href="/goods.php?id=99" />
+ </map>
+
+</div>
+</body></html>

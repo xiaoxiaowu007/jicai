@@ -1,0 +1,109 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="/themes/ecmoban_meilishuo/css2.css" rel="stylesheet">
+<!--友情链接-->
+<div class="bottom_nav c">
+    <div class="bottom_nav1 c w">
+        <div class="bottom_nav_l f">
+      
+      
+      
+            <ul>
+                <div class="c bottom_nav_l_img"><img src="images/bottom1.jpg" width="174" height="42"></div>
+                
+                     <li><a href="/article.php?id=39">资质荣誉</a></li>
+                     <li><a href="/article.php?id=40">公司信息</a></li>
+                     <li><a href="/article.php?id=36">关于我们</a></li>
+                     
+            </ul>
+       
+            <ul>
+                <div class="c bottom_nav_l_img"><img src="images/bottom2.jpg" width="174" height="42"></div>
+                
+                     <li><a href="/article.php?id=41">产品分类</a></li>
+                     <li><a href="/article.php?id=11">订购方式</a></li>
+                     <li><a href="/article.php?id=43">联系我们</a></li>
+            </ul>
+       
+            <ul>
+                <div class="c bottom_nav_l_img"><img src="images/bottom3.jpg" width="174" height="42"></div>
+                
+                     <li><a href="/article.php?id=44">快递运输</a></li>
+                     <li><a href="/article.php?id=45">物流运输</a></li>
+                
+                
+            </ul>
+       
+            <ul>
+                <div class="c bottom_nav_l_img"><img src="images/bottom4.jpg" width="174" height="42"></div>
+                
+                     <li><a href="/article.php?id=46">现金付款</a></li>
+                     <li><a href="/article.php?id=47">刷卡付款</a></li>
+                
+                
+            </ul>
+       
+            <ul>
+                <div class="c bottom_nav_l_img"><img src="images/bottom5.jpg" width="174" height="42"></div>
+                
+                     <li><a href="/article.php?id=48">商品保修</a></li>
+                	 <li><a href="/article.php?id=49">换货原则</a></li>
+                     <li><a href="/article.php?id=50">换货流程</a></li>
+                
+                
+            </ul>
+          
+        </div>
+        
+        <div class="bottom_nav_r r"><img src="images/1436935069.jpg" width="117" height="115"><br>
+            吉采电子二维码</div>
+    </div>
+</div>
+<div class="foot c">
+    <div class="foot1 c w">版权所有：哈尔滨吉采电子商务有限公司      咨询电话：400-030-8722/0451-55530020        技术支持:欧嘉科技          备案：黑ICP备14005123号-1</div>
+</div>
+
+    <div class="fudong" style="display:none !important;">
+        <div class="fupos">
+            <div class="sn-nav-wrapper">
+
+                <a id="floor1" href="tencent://message/?uin= {$qq[0]}&websiteName=(www.jcdlm.com)&Menu=yes">
+                    <div class="titlebg" >
+                        
+                    </div>
+
+                </a>
+                <a id="floor1" href="tencent://message/?uin= {$qq[1]}&websiteName=(www.jcdlm.com)&Menu=yes">
+                    <div class="titlebg" >
+                        
+                    </div>
+
+                </a>
+                <a id="floor1" href="tencent://message/?uin= {$qq[2]}&websiteName=(www.jcdlm.com)&Menu=yes">
+                    <div class="titlebg" >
+                        
+                    </div>
+
+                </a>
+                <a id="floor2" href="/flow.php">
+                    
+                </a>
+
+                <a id="floor4" href="/article_list.php?id=22" target="_blank">
+                    
+                </a>
+                <a id="floor5">
+                    <div class="ewm">
+                        <img src="themes/ecmoban_meilishuo/images/1436935069.jpg" width="145" height="145">
+                    </div>
+                </a>
+                <a id="floor6" href="#">
+                    
+                </a>
+                
+            </div>
+
+        </div>
+    </div>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256809097'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256809097' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fdbff8db0dc57ee9c5afe629ed439ad7c' type='text/javascript'%3E%3C/script%3E")) </script>
